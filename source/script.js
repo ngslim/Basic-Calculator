@@ -1,6 +1,12 @@
-function inputValidate(input) {
+function inputValidate() {
   const button = document.getElementById("calc");
-  if (isNaN(input)) {
+  if (isNaN(document.getElementById("a").value)) {
+    document.getElementById("error-log").innerHTML = "Số đã điền không hợp lệ";
+    button.disabled = true;
+    return;
+  }
+
+  if (isNaN(document.getElementById("b").value)) {
     document.getElementById("error-log").innerHTML = "Số đã điền không hợp lệ";
     button.disabled = true;
     return;
