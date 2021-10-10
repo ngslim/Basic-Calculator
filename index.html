@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bé Tập Tính</title>
+    <link href="source/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <script src="source/script.js"></script>
+  </head>
+  <body>
+    <h1>Bé Tập Tính</h1>
+    <br />
+    <div class="row">
+      <!--INPUT-->
+      <div class="col-4">
+        <form id="input">
+          <div class="row">
+            <div class="col-12 col-lg-4">Số thứ nhất</div>
+            <div class="col-12 col-lg-8">
+              <input
+                type="text"
+                id="a"
+                onfocusout="inputValidate(this.value)"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-4">Số thứ hai</div>
+            <div class="col-12 col-lg-8">
+              <input
+                type="text"
+                id="b"
+                onfocusout="inputValidate(this.value)"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-4">Kết quả</div>
+            <div class="col-12 col-lg-8">
+              <input type="text" id="result" readonly />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-4">
+        <!--OPTIONS-->
+        <div class="container">
+          <form id="options">
+            <div class="row">
+              <div class="col-12 col-lg-3">
+                <input type="radio" id="add" name="arithmetic" value="ADD" />
+                <label for="add">Cộng</label>
+              </div>
+              <div class="col-12 col-lg-3">
+                <input type="radio" id="sub" name="arithmetic" value="SUB" />
+                <label for="sub">Trừ</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-3">
+                <input type="radio" id="mul" name="arithmetic" value="MUL" />
+                <label for="mul">Nhân</label>
+              </div>
+              <div class="col-12 col-lg-3">
+                <input type="radio" id="div" name="arithmetic" value="DIV" />
+                <label for="sub">Chia</label>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-2">
+              <button
+                onclick="handleButtonClicked(document.getElementById('input'), document.getElementById('options'))"
+                id="calc"
+              >
+                Tính
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-1">Thông báo</div>
+      <div class="col-12 col-lg-10">
+        <div class="error-log" id="error-log"></div>
+      </div>
+    </div>
+  </body>
+</html>

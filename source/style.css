@@ -1,0 +1,11 @@
+body {
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 90% !important;
+  margin-left: 10px !important;
+}
+
+.error-log {
+  padding-left: 3.5%;
+  font-style: italic;
+  color: red;
+}
